@@ -15,7 +15,7 @@
         elseif (empty($password_attempt)) {}
         else {
             // Continue with the password validation
-            require("login_connection.php");
+            require("login_database_connection.php");
 
             // Querying the database for the information
             $query = "
@@ -45,7 +45,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require("login_connection.php") ?>
+    <?php require("login_database_connection.php") ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">

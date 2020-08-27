@@ -159,3 +159,8 @@ span.psw {
         width: 100%;
     }
 }
+
+/* Div for additional information below the table */
+#extra-information {
+    text-align: center;
+}

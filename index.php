@@ -74,13 +74,13 @@
                         // Fetching a single row
                         $response = mysqli_fetch_assoc(mysqli_query($connection, $query));
                     ?>
-                    <td> <?php echo $response["song_count"]; ?> </td>
-                    <td> <?php echo $response["album_count"]; ?> </td>
-                    <td> <?php echo $response["artist_count"]; ?> </td>
-                    <td> <?php echo $response["genre_count"]; ?> </td>
+                    <td> <?php echo $response["song_count"] . " songs"; ?> </td>
+                    <td> <?php echo $response["album_count"] . " albums"; ?> </td>
+                    <td> <?php echo $response["artist_count"] . " artists"; ?> </td>
+                    <td> <?php echo $response["genre_count"] . " genres"; ?> </td>
                     <td> <?php
                         $seconds = round($response["total_duration"]);
-                        echo sprintf('%01d:%02d:%02d', ($seconds / 60 % 60 );
+                        echo sprintf('%01d:%02d:%02d', ($seconds / 3600), ($seconds / 60 % 60), ($seconds % 60));
                     ?> </td>
                     <td> <?php echo round($response["total_size"] / 1024) ."Mb"; ?> </td>
                 </tr>
